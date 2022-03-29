@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap');
+
+
+:root {
+    /* Tipo de Fuentes */
+    --letra-roboto: 'Roboto', sans-serif; 
+    --letra-OpenSans: 'Open Sans', sans-serif; 
+    --letra-lato: 'Lato', sans-serif; 
+    --letra-poppins: 'Poppins', sans-serif; 
+    --letra-robotoMono: 'Roboto Mono', sans-serif; 
+    --letra-raleway: 'Raleway', sans-serif; 
+    --letra-montserrat: 'Montserrat', sans-serif; 
+    --letra-inter: 'Inter', sans-serif; 
+    --letra-manrope: 'Manrope', sans-serif; 
+
+
+    /* Color de Fuentes */
+
+    --color-negro: #000000;
+    --color-blanco: #FFFFFF;
+    --color-gris: #F8F9F9;
+    --color-rojo: #EC7063;
+    --color-blue: #5499C7;
+    --color-morado: ##8E44AD;
+
+
+    /* Colores de Fondos */
+    --fondo-oscuro: rgb(22, 41, 54);
+    --fondo-claro: rgb(253, 252, 253);
+
+    /* color de fondo de boton modo claro y oscuro  */
+
+    --color-btn: #000; 
+    --color-btn-dos: #fff; 
+}
+
+body {
+    background-color: var(--fondo-claro);
+}
+
+
+/** diseño al scroll de navegacion ***/
+
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(14, 160, 228);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+/*** estilo a boton de modo claro y oscuro ****/
+
+
+.config {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+}
+
+.switch {
+    display: block;
+    text-decoration: none;
+    background: var(--color-btn);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.switch__toggle {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.switch__toggle img {
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+
+/**** modo oscuro ****/
+
+body.darkmode {
+    background-color: var(--fondo-oscuro);
+    color: #fff;
+}
+
+body.darkmode .switch {
+    background-color: var(--color-btn-dos);
+}
+
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.container {
+    padding: 0 60px 0 60px;
+}
+
+
+/* PRESENTACION */
+
+.presentacion {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.presentacion--two {
+    margin-top: 60px;
+}
+
+.presentacion__contenedor {
+    max-width: 60%;
+    text-align: center;
+}
+
+.presentacion__title {
+    font-family: var(--letra-roboto);
+    font-size: 2em;
+}
+
+.presentacion__title span {
+    color: var(--color-rojo);
+}
+
+.presentacion__title--tree span{
+    color: var(--color-blue);
+}
+
+.presentacion__title--cuto span{
+    color: var(--color-morado);
+}
+
+.presentacion__parrafo {
+    margin-top: 15px;
+    font-family: var(--letra-manrope);
+    font-size: 1em;
+    line-height: 24px;
+}
+
+.presentacion__parrafo--two {
+    margin-top: 15px;
+}
+
+.presentacion__parrafo--two span {
+    color: var(--color-rojo);
+    font-weight: 600;
+}
+
+/* COLEGIO CARDS */
+
+.colegio__cards {
+    margin-top: 2em;
+}
+
+.colegio__card {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.colegio__info {
+    max-width: 35%;
+}
+
+.colegio__img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.colegio__title {
+    font-family: var(--letra-poppins);
+    font-size: 1.2em;
+    color: var(--color-blue);
+    margin-top: 15px;
+}
+
+.colegio__title--cuto {
+    color: var(--color-morado);
+}
+
+.colegio__parrfo {
+    font-family: var(--letra-OpenSans);
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.colegio__parrfo span {
+    font-family: var(--letra-montserrat);
+    font-weight: 400;
+}
+
+.colegio__redes {
+    display: flex;
+    margin-top: 15px;
+}
+
+.colegio__red {
+    width: 40px;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .container {
+        padding: 0 30px 0 30px;
+    }
+    .presentacion__contenedor {
+        max-width:100%;
+    }
+    .colegio__card {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .colegio__info {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 600px) {
+    .container {
+        padding: 0 30px 0 30px;
+    }
+    .presentacion__contenedor {
+        max-width:100%;
+    }
+    .colegio__card {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .colegio__info {
+        max-width: 100%;
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        padding: 0 30px 0 30px;
+    }
+    .presentacion__contenedor {
+        max-width:100%;
+    }
+    .colegio__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .colegio__info {
+        max-width: 100%;
+        font-size: 1.5em;
+    }
+}
